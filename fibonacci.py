@@ -14,8 +14,26 @@ def fibonacci(n: int) -> int:
         return fib_nums[-1]
 
 
+def fib_gen():
+    """Генератор чисел фибоначчи"""
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+
 def main():
     print(fibonacci(10000))
+    
+    for n in fib_gen():
+        print(n)
+        if n > 10**9:
+            break
+    
+    gen = fib_gen()
+    print(next(gen))
+    print(next(gen))
+    print(next(gen))
 
 
 if __name__ == '__main__':
