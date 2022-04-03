@@ -1,7 +1,7 @@
 fib_nums = [0, 1]
 
 
-def fibonacci(n):
+def fibonacci(n: int) -> int:
     """Последовательность фибоначчи: 0 1 1 2 3 5 8 13 21 ..."""
     if not (isinstance(n, int) and n > 0):
         raise ValueError(' Value must be int > 0')
