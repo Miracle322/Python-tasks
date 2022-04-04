@@ -14,3 +14,19 @@ def common_elements(array1: list, array2: list) -> list:
             count_elements[element] -= 1
 
     return result
+
+
+def main():
+    result = common_elements([1, 2, 3, 2, 0], [5, 1, 2, 7, 3, 2])
+    assert sorted(result) == [1, 2, 2, 3], f'Wrong answer: {result}'
+    result = common_elements([], [])
+    assert sorted(result) == [], f'Wrong answer: {result}'
+    result = common_elements([1, 3, 5, 7], [2, 4, 6, 8, 10])
+    assert sorted(result) == [], f'Wrong answer: {result}'
+    result = common_elements([3, 3, 3, 3, 1], [2, 3, 3, 3])
+    assert sorted(result) == [3, 3, 3], f'Wrong answer: {result}'
+    print('Done')
+
+
+if __name__ == '__main__':
+    main()
