@@ -16,3 +16,27 @@ def range_equal_target(elements: list, target: int):
         return start, end + 1
     else:
         return False
+
+
+def main():
+    result = range_equal_target([-3, 1, 4, 5], 9)
+    assert result == (2, 4), f'Wrong answer: {result}'
+    result = range_equal_target([], 0)
+    assert result is False, f'Wrong answer: {result}'
+    result = range_equal_target([-3, 1, 4, 5, 8, 13, 20], -2)
+    assert result == (0, 2), f'Wrong answer: {result}'
+    result = range_equal_target([-3, 1, 4, 5, 8, 13, 20], 5)
+    assert result == (1, 3), f'Wrong answer: {result}'
+    result = range_equal_target([-3, 1, 4, 5, 8, 13, 20], 18)
+    assert result == (1, 5), f'Wrong answer: {result}'
+    result = range_equal_target([-3, 1, 4, 5, 8, 13, 20], 4)
+    assert result == (2, 3), f'Wrong answer: {result}'
+    result = range_equal_target([-3, 1, 4, 5, 8, 13, 20], 41)
+    assert result == (4, 7), f'Wrong answer: {result}'
+    result = range_equal_target([-3, 1, 4, 5, 8, 13, 20], 0)
+    assert result is False, f'Wrong answer: {result}'
+    print('Done')
+
+
+if __name__ == '__main__':
+    main()
