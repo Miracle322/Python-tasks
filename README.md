@@ -7,7 +7,7 @@
        [1,4,3,2] => "1-4"<br>
        [1,4] => "1,4"<br>
 4) <b>max_sub_sequence_ones:</b> Дан массив из нулей и единиц. Нужно определить, какой максимальный по длине подинтервал единиц можно получить, удалив ровно один элемент массива.
-5) <b>group_words:</b> Sample Input ["eat", "tea", "tan", "ate", "nat", "bat"]
+5) <b>group_words:</b> Sample Input ["eat", "tea", "tan", "ate", "nat", "bat"]<br>
        Sample Output [ ["ate", "eat", "tea"], ["nat", "tan"], ["bat"] ]<br>
        Т.е. сгруппировать слова по "общим буквам"
 6) <b>merge:</b> Слияние отрезков:
