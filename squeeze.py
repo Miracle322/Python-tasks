@@ -21,3 +21,23 @@ def squeeze(array: list) -> str:
         result_s += str(array[-1])
 
     return result_s
+
+
+def main():
+    result = squeeze([1, 4, 5, 2, 3, 9, 8, 11, 0])
+    assert result == '0-5,8-9,11', f'Wrong answer: {result}'
+    result = squeeze([1, 4, 3, 2])
+    assert result == '1-4', f'Wrong answer: {result}'
+    result = squeeze([])
+    assert result == '', f'Wrong answer: {result}'
+    result = squeeze([1, 4])
+    assert result == '1,4', f'Wrong answer: {result}'
+    result = squeeze([10])
+    assert result == '10', f'Wrong answer: {result}'
+    result = squeeze([1, 2])
+    assert result == '1-2', f'Wrong answer: {result}'
+    print('Done')
+
+
+if __name__ == '__main__':
+    main()
